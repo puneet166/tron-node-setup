@@ -10,7 +10,11 @@ The node is running on mainnet and syncing with the TRON network. The node expos
 
 ## Public RPC Endpoint
 
+HTTP (Non-secure):
 http://139.59.17.97:8090/wallet/getnowblock
+
+HTTPS (Secure):
+https://tron-node.duckdns.org/wallet/getnowblock
 
 ---
 
@@ -96,11 +100,15 @@ sudo ufw allow 8090
 
 ## API Usage
 
-### Get latest block
+### Get Latest Block
 
-```bash
+# HTTP
 curl http://139.59.17.97:8090/wallet/getnowblock
-```
+
+# HTTPS
+curl https://tron-node.duckdns.org/wallet/getnowblock
+
+---
 
 ### Response
 
@@ -122,13 +130,17 @@ curl http://139.59.17.97:8090/wallet/getnowblock
 
 ---
 
-### Get block by number
+### Get Block by Number
 
-```bash
+# HTTP (Non-secure)
 curl -X POST http://139.59.17.97:8090/wallet/getblockbynum \
 -H "Content-Type: application/json" \
 -d '{"num":1000}'
-```
+
+# HTTPS (Secure)
+curl -X POST https://tron-node.duckdns.org/wallet/getblockbynum \
+-H "Content-Type: application/json" \
+-d '{"num":1000}'
 
 ### Response
 
