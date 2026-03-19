@@ -133,14 +133,10 @@ curl https://tron-node.duckdns.org/wallet/getnowblock
 ### Get Block by Number
 
 # HTTP (Non-secure)
-curl -X POST "http://139.59.17.97:8090/wallet/getblockbynum" \
-  -H "Content-Type: application/json" \
-  -d '{"num":1000}'
+curl -X POST "http://139.59.17.97:8090/wallet/getblockbynum" -H "Content-Type: application/json" -d '{"num":1000}'
 
 # HTTPS (Secure)
-curl -X POST https://tron-node.duckdns.org/wallet/getblockbynum \
--H "Content-Type: application/json" \
--d '{"num":1000}'
+curl -X POST https://tron-node.duckdns.org/wallet/getblockbynum -H "Content-Type: application/json" -d '{"num":1000}'
 
 ### Response
 
